@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App02_Xamarin.Pages.Inicio">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <StackLayout VerticalOptions="Start">
+                <Image Source="bancos-de-imagens.jpg" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <RelativeLayout VerticalOptions="CenterAndExpand" HeightRequest="200">
+                <Image Source="xamarintips.png"
+                           x:Name="Perfil"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.5, Constant=-60}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.2}"
+                           WidthRequest="120"
+                           HeightRequest="120"
+                           />
+                <Label Text="Criadores do Xamarin"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=X, Factor=1}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=Y, Factor=1, Constant=120}"
+                           FontSize="18"
+                           FontAttributes="Bold" HorizontalOptions="Center"  
+                           />
+            </RelativeLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

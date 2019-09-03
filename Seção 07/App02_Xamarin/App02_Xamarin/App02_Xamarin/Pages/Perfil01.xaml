@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App02_Xamarin.Pages.Perfil01">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0">
+                <RelativeLayout VerticalOptions="Start" HeightRequest="200">
+                    <Image Source="fundo_amarelo.png"
+                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                           />
+                    <Image Source="perfil.png"
+                           x:Name="Perfil"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.5, Constant=-60}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.2}"
+                           WidthRequest="120"
+                           HeightRequest="120"
+                           />
+                    <Label Text="Miguel de Icaza"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=X, Factor=1}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=Y, Factor=1, Constant=120}"
+                           FontSize="18"
+                           FontAttributes="Bold" HorizontalOptions="Center"  
+                           />
+                </RelativeLayout>
+                <Grid Padding="20" HeightRequest="120" BackgroundColor="#0D1F2D">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="34" TextColor="White" FontSize="28" />
+                        <Label Text="Anos" TextColor="White" HorizontalOptions="Center" FontSize="12" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="18/08/1984" TextColor="White" FontSize="28" />
+                        <Label Text="Nasceu" TextColor="White" HorizontalOptions="Center" FontSize="12" />
+                    </StackLayout>
+                
+                </Grid>
+                <StackLayout Padding="30" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="Miguel de Icaza nasceu na cidade do México e estudou na universidade de Havard. 
+                           Icaza começou o projeto GNOME em agosto de 1997. Ele e Federico Mena, criaram o Xamarin!" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

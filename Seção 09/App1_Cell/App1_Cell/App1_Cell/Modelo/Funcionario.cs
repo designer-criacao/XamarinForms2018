@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace App1_Cell.Modelo
+{
+    public class Funcionario
+    {
+        public string Nome { get; set; }
+        public string Cargo { get; set; }
+        public string Foto { get; set; }
+        public int Idade { get; set; }
+    }
+}
